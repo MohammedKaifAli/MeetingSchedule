@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Meeting Scheduler"
+                android:textSize="24sp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"/>
+
+            <EditText
+                android:id="@+id/meetingTitleEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="70"
+                android:layout_below="@id/titleTextView"
+                android:hint="Meeting Title"
+                android:inputType="text"
+                android:layout_marginTop="16dp"/>
+
+            <DatePicker
+                android:id="@+id/datePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/meetingTitleEditText"
+                android:layout_marginTop="16dp"/>
+
+            <TimePicker
+                android:id="@+id/timePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/datePicker"
+                android:layout_marginTop="16dp"/>
+
+            <Button
+                android:id="@+id/scheduleMeetingButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Schedule Meeting"
+                android:layout_below="@id/timePicker"
+                android:layout_marginTop="16dp"/>
+
+            <Button
+                android:id="@+id/cancelMeetingButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel Meeting"
+                android:layout_below="@id/scheduleMeetingButton"
+                android:layout_marginTop="16dp"/>
+
+            <Button
+                android:id="@+id/previousButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Previous Meeting"
+                android:layout_below="@id/cancelMeetingButton"
+                android:layout_marginTop="16dp"/>
+
+            <Button
+                android:id="@+id/nextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Next Meeting"
+                android:layout_below="@id/previousButton"
+                android:layout_marginTop="16dp"/>
+
+            <Button
+                android:id="@+id/viewMeetingsButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View Scheduled Meetings"
+                android:layout_below="@id/nextButton"
+                android:layout_marginTop="16dp"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
